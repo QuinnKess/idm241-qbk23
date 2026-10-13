@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alpha microinteraction: the Pinterest pin Save button.">
+    <title>Alpha Microinteraction: Pinterest Save Button</title>
+  </head>
+
+  <body>
+    <header>
+      <h1>Quinn Kessler</h1>
+      <p>IDM 241 &middot; Alpha Microinteraction</p>
+      <hr>
+    </header>
+
+    <main>
+
+      <section id="url">
+        <h2>URL</h2>
+        <p><a href="https://www.pinterest.com/" target="_blank">https://www.pinterest.com/</a></p>
+      </section>
+
+      <section id="object">
+        <h2>Object: Save Button</h2>
+        <p>How to find it: log in to Pinterest, stay on the Home feed, and move the mouse over any pin. The red "Save" button appears in the top-right corner of the pin.</p>
+        <hr>
+      </section>
+
+      <section id="triggers">
+        <h2>TRIGGERS:</h2>
+        <ul>
+          <li><b>Pin</b>
+            <ul>
+              <li>Hover ON</li>
+              <li>Hover OFF</li>
+            </ul>
+          </li>
+          <li><b>Save Button</b>
+            <ul>
+              <li>Hover ON</li>
+              <li>Hover OFF</li>
+              <li>Click ON</li>
+            </ul>
+          </li>
+        </ul>
+        <hr>
+      </section>
+
+      <section id="rules">
+        <h2>RULES:</h2>
+        <ul>
+          <li><b>Pin:</b>
+            <ul>
+              <li>Hover ON
+                <ul>
+                  <li>Dark gray overlay appears over the pin image</li>
+                  <li>Board name "Plugg" with a down arrow appears top left</li>
+                  <li>Red "Save" button appears top right</li>
+                  <li>Share icon appears bottom right
+                    <ul>
+                      <li>White rounded square, black arrow</li>
+                    </ul>
+                  </li>
+                </ul>
+              </li>
+              <li>Hover OFF
+                <ul>
+                  <li>Overlay disappears</li>
+                  <li>Board name, Save button and share icon disappear</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><b>Save Button:</b>
+            <ul>
+              <li>Hover ON
+                <ul>
+                  <li>Cursor changes to Finger</li>
+                  <li>Button turns a slightly darker red</li>
+                </ul>
+              </li>
+              <li>Hover OFF
+                <ul>
+                  <li>Cursor changes back to default</li>
+                  <li>Button goes back to normal red</li>
+                </ul>
+              </li>
+              <li>Click ON
+                <ul>
+                  <li>Pin is saved to the board shown on the left ("Plugg")</li>
+                  <li>Database updated with the pin added to that board</li>
+                  <li>Button background changes from RED to BLACK</li>
+                  <li>Button text "Save" changes to "Saved"</li>
+                  <li>Down arrow next to the board name disappears</li>
+                  <li>Board name "Plugg" becomes an underlined link to the board</li>
+                  <li>"Plugg" stays the default board for the next save</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+        <hr>
+      </section>
+
+      <section id="feedback">
+        <h2>FEEDBACK:</h2>
+        <ul>
+          <li><b>Pin:</b>
+            <ul>
+              <li>Hover ON
+                <ul>
+                  <li>Dark gray overlay appears over the pin image</li>
+                  <li>Board name "Plugg" with a down arrow appears top left</li>
+                  <li>Red "Save" button appears top right</li>
+                  <li>Share icon appears bottom right</li>
+                </ul>
+              </li>
+              <li>Hover OFF
+                <ul>
+                  <li>Overlay disappears</li>
+                  <li>Board name, Save button and share icon disappear</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><b>Save Button:</b>
+            <ul>
+              <li>Hover ON
+                <ul>
+                  <li>Cursor changes to Finger</li>
+                  <li>Button turns a slightly darker red</li>
+                </ul>
+              </li>
+              <li>Hover OFF
+                <ul>
+                  <li>Cursor changes back to default</li>
+                  <li>Button goes back to normal red</li>
+                </ul>
+              </li>
+              <li>Click ON
+                <ul>
+                  <li>Button background changes from RED to BLACK</li>
+                  <li>Button text "Save" changes to "Saved"</li>
+                  <li>Down arrow next to the board name disappears</li>
+                  <li>Board name "Plugg" becomes an underlined link</li>
+                </ul>
+              </li>
+              <li>Sound: none</li>
+              <li>Feel: none</li>
+            </ul>
+          </li>
+        </ul>
+        <hr>
+      </section>
+
+      <section id="loops">
+        <h2>LOOPS/MODE:</h2>
+        <ul>
+          <li><b>Loops:</b>
+            <ul>
+              <li>Every pin in the feed has its own Save button</li>
+              <li>Feed scrolls forever, so the microinteraction repeats on every new pin</li>
+              <li>Saved pin still shows "Saved" when hovered again</li>
+              <li>Last board used becomes the default board on the next pin</li>
+            </ul>
+          </li>
+          <li><b>Modes:</b>
+            <ul>
+              <li>Board picker: clicking the board name opens a list of boards to save to instead</li>
+              <li>Logged out: clicking Save asks the user to log in or sign up</li>
+              <li>Touch (phone/tablet): no hover, so Save shows after tapping into the pin</li>
+            </ul>
+          </li>
+        </ul>
+        <hr>
+      </section>
+
+      <section id="visuals">
+        <h2>VISUALS:</h2>
+        <p>Black arrow = cursor position. Yellow rings = click.</p>
+
+        <table cellpadding="6" cellspacing="0" width="100%">
+          <tr>
+            <td width="33%" valign="top" align="center">
+              <figure>
+                <img src="images/step1-hover.png" width="100%" alt="Pin on hover, cursor resting over the red Save button in the top right corner.">
+                <figcaption>1. Hover ON</figcaption>
+              </figure>
+            </td>
+            <td width="33%" valign="top" align="center">
+              <figure>
+                <img src="images/step2-click.png" width="100%" alt="Cursor clicking the red Save button, shown with yellow click rings.">
+                <figcaption>2. Click ON</figcaption>
+              </figure>
+            </td>
+            <td width="33%" valign="top" align="center">
+              <figure>
+                <img src="images/step3-saved.png" width="100%" alt="Button now black and reads Saved, board name Plugg is an underlined link, cursor still over the button.">
+                <figcaption>3. Saved</figcaption>
+              </figure>
+            </td>
+          </tr>
+        </table>
+
+        <table cellpadding="6" cellspacing="0" width="100%">
+          <tr>
+            <td width="50%" valign="top" align="center">
+              <figure>
+                <img src="images/save-animation.gif" width="100%" alt="Animation: cursor moves up to the Save button, clicks, and the button changes to Saved.">
+                <figcaption>Animation (loops)</figcaption>
+              </figure>
+            </td>
+            <td width="50%"></td>
+          </tr>
+        </table>
+      </section>
+
+    </main>
+  </body>
+</html>

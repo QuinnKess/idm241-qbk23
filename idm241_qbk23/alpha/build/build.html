@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Alpha microinteraction: the Pinterest pin Save button.">
+    <title>Alpha Build: Pinterest Save Button</title>
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter+Tight:wght@400;700&family=Instrument+Serif:ital@1&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+  </head>
+
+  <body>
+    <header>
+      <h1>Quinn Kessler</h1>
+      <p>IDM 241 &middot; Alpha Build</p>
+    </header>
+
+    <main>
+
+      <section id="demo">
+        <p class="eyebrow">[ Pinterest &middot; Save Button ]</p>
+        <h2 class="title">Alpha <em>Build</em></h2>
+
+        <div class="pin">
+          <img src="images/pin.jpg" alt="Two hikers standing on a rock above a forested mountain valley.">
+
+          <!-- Hidden checkbox remembers if the pin is saved -->
+          <input type="checkbox" id="save-pin" class="save-check">
+
+          <div class="overlay">
+            <span class="board">Board <span class="arrow">&#9662;</span></span>
+
+            <!-- Clicking the label checks the checkbox -->
+            <label for="save-pin" class="save-btn">
+              <span class="save-text">Save</span>
+              <span class="saved-text">Saved</span>
+            </label>
+
+            <span class="share">&uarr;</span>
+          </div>
+        </div>
+
+        <p class="hint">Hover the pin, hover the Board button, then click Save.</p>
+      </section>
+
+      <section id="triggers">
+        <h2>TRIGGERS:</h2>
+        <ul>
+          <li><b>Pin (image)</b>
+            <ul>
+              <li>Hover ON</li>
+              <li>Hover OFF</li>
+            </ul>
+          </li>
+          <li><b>Board Button</b>
+            <ul>
+              <li>Hover ON</li>
+              <li>Hover OFF</li>
+            </ul>
+          </li>
+          <li><b>Save Button</b>
+            <ul>
+              <li>Hover ON</li>
+              <li>Hover OFF</li>
+              <li>Click ON</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section id="rules">
+        <h2>RULES:</h2>
+        <ul>
+          <li><b>Pin (image):</b>
+            <ul>
+              <li>Hover ON
+                <ul>
+                  <li>Dark gray overlay fades in over the image</li>
+                  <li>Board button with a down arrow appears top left</li>
+                  <li>Red Save button appears top right</li>
+                  <li>Share icon appears bottom right (white rounded square, black arrow)</li>
+                </ul>
+              </li>
+              <li>Hover OFF
+                <ul>
+                  <li>Overlay fades out</li>
+                  <li>Board button, Save button and share icon disappear</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><b>Board Button:</b>
+            <ul>
+              <li>Hover ON
+                <ul>
+                  <li>Cursor changes to Finger</li>
+                  <li>Gray rounded background appears behind "Board" and the down arrow</li>
+                </ul>
+              </li>
+              <li>Hover OFF
+                <ul>
+                  <li>Cursor changes back to default</li>
+                  <li>Gray background disappears</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><b>Save Button:</b>
+            <ul>
+              <li>Hover ON
+                <ul>
+                  <li>Cursor changes to Finger</li>
+                  <li>Button turns a slightly darker red</li>
+                </ul>
+              </li>
+              <li>Hover OFF
+                <ul>
+                  <li>Cursor changes back to default</li>
+                  <li>Button goes back to normal red</li>
+                </ul>
+              </li>
+              <li>Click ON
+                <ul>
+                  <li>Pin is saved to the board shown on the Board button</li>
+                  <li>Database updated with the pin added to that board</li>
+                  <li>Button background changes from RED to BLACK</li>
+                  <li>Button text "Save" changes to "Saved"</li>
+                  <li>Down arrow on the Board button disappears</li>
+                  <li>Board button text becomes an underlined link to the board</li>
+                  <li>That board stays the default board for the next save</li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+
+      <section id="feedback">
+        <h2>FEEDBACK:</h2>
+        <ul>
+          <li><b>Pin (image):</b>
+            <ul>
+              <li>See: image darkens on hover and returns to normal on hover off</li>
+              <li>See: Board button, Save button and share icon appear and disappear with the overlay</li>
+            </ul>
+          </li>
+          <li><b>Board Button:</b>
+            <ul>
+              <li>See: pointer cursor and a gray rounded background on hover</li>
+              <li>See: after saving, the down arrow is gone and "Board" is underlined</li>
+            </ul>
+          </li>
+          <li><b>Save Button:</b>
+            <ul>
+              <li>See: pointer cursor and a darker red on hover</li>
+              <li>See: on click, the button turns black and reads "Saved"</li>
+            </ul>
+          </li>
+          <li><b>Hear:</b> none</li>
+          <li><b>Feel:</b> none</li>
+        </ul>
+      </section>
+
+      <section id="loops">
+        <h2>LOOPS &amp; MODES:</h2>
+        <ul>
+          <li><b>Loops:</b>
+            <ul>
+              <li>Every pin in the feed has its own image overlay, Board button and Save button</li>
+              <li>Feed scrolls forever, so the microinteraction repeats on every new pin</li>
+              <li>Saved pin still shows "Saved" when hovered again</li>
+              <li>Last board used becomes the default board on the next pin</li>
+            </ul>
+          </li>
+          <li><b>Modes:</b>
+            <ul>
+              <li>Board picker: clicking the Board button opens a list of boards to save to instead (not built in this Alpha)</li>
+              <li>Logged out: clicking Save asks the user to log in or sign up</li>
+              <li>Touch (phone/tablet): no hover, so the overlay and buttons are always shown</li>
+            </ul>
+          </li>
+        </ul>
+      </section>
+    </main>
+  </body>
+</html>
