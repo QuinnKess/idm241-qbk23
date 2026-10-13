@@ -33,4 +33,4 @@ idm241_qbk23/
 
 ## View it
 
-Open `[idm241_qbk23/alpha/build/build.html](https://idm241-qbk23.vercel.app/idm241_qbk23/alpha/build/build.html)` in a browser.
+Live site: [idm241-qbk23.vercel.app/idm241_qbk23/alpha/build/build.html](https://idm241-qbk23.vercel.app/idm241_qbk23/alpha/build/build.html)
